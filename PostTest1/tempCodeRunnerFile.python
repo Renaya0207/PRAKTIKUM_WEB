@@ -1,0 +1,23 @@
+# Program konversi nilai angka ke huruf (tanpa elif, tanpa def)
+
+# Input nilai dari user
+nilai = int(input("Masukkan nilai: "))
+
+# Variabel awal huruf
+grade = "D"   # default
+
+# Proses konversi nilai
+if nilai >= 80:
+    grade = "A"
+else:
+    if nilai >= 70:
+        grade = "B"
+    else:
+        if nilai >= 60:
+            grade = "C"
+        else:
+            grade = "D"
+
+# Output hasil
+print("Nilai angka:", nilai)
+print("Nilai huruf:", grade)

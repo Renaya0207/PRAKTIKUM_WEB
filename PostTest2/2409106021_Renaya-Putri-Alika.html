@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Collectibles Catalog</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background-color: #20232a;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+        header h1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #61dafb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* MAIN */
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            margin-bottom: 1rem;
+            color: #d62828;
+            border-bottom: 3px solid #d62828;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Card reusable */
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Koleksi pakai grid */
+        #koleksi {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Tentang & Kontak */
+        #tentang, #kontak {
+            margin-top: 2rem;
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Form Kontak */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        form input, form textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            background: #d62828;
+            color: #fff;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background: #a4161a;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #20232a;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marvel Collectibles Catalog</h1>
+        <nav>
+            <ul>
+                <li><a href="#koleksi">Koleksi</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Koleksi -->
+        <section id="koleksi">
+            <h2>Koleksi Terbaru</h2>
+            <article class="card">
+                <img src="https://i.ibb.co/3yH4s9n/ironman.jpg" alt="Iron Man Figure">
+                <h3>Iron Man Mark 85 Figure</h3>
+                <p>Figure skala 1:6 dengan detail armor dari film Avengers: Endgame.</p>
+            </article>
+            <article class="card">
+                <img src="https://i.ibb.co/ypBLVFH/capshield.jpg" alt="Captain America Shield">
+                <h3>Captain America Shield Replica</h3>
+                <p>Replika perisai Captain America dengan ukuran asli dan bahan metal.</p>
+            </article>
+            <article class="card">
+                <img src="https://i.ibb.co/9HNfZ8r/spiderman.jpg" alt="Spider-Man Statue">
+                <h3>Spider-Man Statue</h3>
+                <p>Patung Spider-Man edisi terbatas dengan pose iconic di gedung kota New York.</p>
+            </article>
+        </section>
+
+        <!-- Tentang -->
+        <section id="tentang">
+            <h2>Tentang</h2>
+            <p>
+                <strong>Marvel Collectibles Catalog</strong> adalah katalog online 
+                yang menampilkan berbagai koleksi resmi Marvel, mulai dari figure, replika,
+                hingga merchandise eksklusif untuk para penggemar.
+            </p>
+        </section>
+
+        <!-- Kontak -->
+        <section id="kontak">
+            <h2>Kontak</h2>
+            <address>
+                <p>Email: <a href="mailto:marvel.catalog@example.com">marvel.catalog@example.com</a></p>
+                <p>Instagram: <a href="https://instagram.com/marvel" target="_blank">@marvel</a></p>
+            </address>
+
+            <!-- Form Kontak -->
+            <form action="#" method="POST">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marvel Collectibles Catalog</p>
+        <p>Referensi desain: 
+            <a href="https://www.marvel.com/" target="_blank">Marvel Official Website</a> | 
+            <a href="https://dribbble.com/tags/catalog" target="_blank">Dribbble Catalog</a>
+        </p>
+    </footer>
+</body>
+</html>
